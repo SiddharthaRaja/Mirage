@@ -1,0 +1,18 @@
+name: ci
+on: [push, pull_request]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix: { python: ["3.10", "3.12"] }
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "${{ matrix.python }}" }
+      - run: pip install -e ".[dev]"
+      - run: ruff check src tests
+      - run: pytest
+      # The whole study, simulated: if a change breaks a measurement, the build fails here
+      - run: mirage demo --out runs/demo --steps 80
+      - uses: actions/upload-artifact@v4
+        with: { name: demo-report-py${{ matrix.python }}, path: runs/demo/report }

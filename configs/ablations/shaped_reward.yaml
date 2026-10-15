@@ -1,0 +1,6 @@
+# Ablation: partial credit for parseable / executable SQL. Tune on val only.
+extends: ../grpo_single.yaml
+name: abl-shaped
+out: ${MIRAGE_RUNS:-runs}/ablations/shaped
+reward: { mode: single, shape: shaped }
+grpo: { max_steps: 150 }

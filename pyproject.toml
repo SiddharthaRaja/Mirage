@@ -1,0 +1,57 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mirage-sql"
+version = "0.1.0"
+description = "How often does an execution reward lie? Reward-fidelity study for GRPO text-to-SQL on a free GPU, with cost per correct query."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Siddhartha Raja" }]
+dependencies = [
+  "sqlglot>=25",
+  "pydantic>=2.5",
+  "pyyaml>=6",
+  "typer>=0.12",
+  "rich>=13",
+  "numpy>=1.24",
+  "matplotlib>=3.7",
+]
+
+[project.optional-dependencies]
+# Everything the GPU side needs. Kaggle images ship torch already; these are
+# the versions whose APIs the training code was written against (TRL 1.15.0,
+# PEFT 0.21.2, inspected from source, not yet executed on a GPU).
+train = [
+  "transformers>=4.56.2",
+  "trl>=1.15,<1.16",
+  "peft>=0.21",
+  "accelerate>=1.4",
+  "datasets>=4.7",
+]
+vllm = ["vllm>=0.10"]
+dev = ["pytest>=8", "ruff>=0.5", "nbformat>=5"]
+
+[project.scripts]
+mirage = "mirage.cli:app"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+mirage = ["py.typed", "assets/*.json"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+extend-exclude = ["kaggle/*.ipynb"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP", "SIM"]
+ignore = ["E501", "B008", "SIM102", "SIM105", "SIM108"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

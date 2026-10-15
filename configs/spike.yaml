@@ -1,0 +1,14 @@
+# Step 1. Baseline candidate models on a val slice before committing compute.
+#   mirage spike -c configs/spike.yaml --n 100
+# Reads: EX, suite EX, pass@8 and the share of questions where 8 attempts
+# disagree (the only questions GRPO can learn from).
+extends: base.yaml
+name: spike
+out: ${MIRAGE_RUNS:-runs}/spike
+candidates:
+  - Qwen/Qwen2.5-Coder-0.5B-Instruct
+  - Qwen/Qwen2.5-0.5B-Instruct
+  - Qwen/Qwen2.5-Coder-1.5B-Instruct
+# Qwen3 small models need chat_template_kwargs {enable_thinking: false}; spike
+# them in a separate run with that set under `model:`. Check current model
+# names on the Hub before relying on this list.

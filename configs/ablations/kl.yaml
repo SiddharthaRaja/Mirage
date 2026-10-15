@@ -1,0 +1,6 @@
+# Ablation: KL coefficient. Run with --set grpo.beta=0.0 and --set grpo.beta=0.1
+# and a distinct --set out=... per value. Val only.
+extends: ../grpo_single.yaml
+name: abl-kl
+out: ${MIRAGE_RUNS:-runs}/ablations/kl
+grpo: { max_steps: 150 }

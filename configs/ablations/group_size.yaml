@@ -1,0 +1,5 @@
+# Ablation: 4 attempts per question instead of 8 (half the rollout cost).
+extends: ../grpo_single.yaml
+name: abl-g4
+out: ${MIRAGE_RUNS:-runs}/ablations/g4
+grpo: { num_generations: 4, per_device_train_batch_size: 16, max_steps: 150 }

@@ -1,0 +1,293 @@
+[
+  {
+    "config_id": "base[concurrency=16]",
+    "backend": "sim-1.5b-ft",
+    "label": "base",
+    "params": {
+      "group": "base",
+      "mode": "closed",
+      "concurrency": 16,
+      "rate_qps": null,
+      "max_tokens": 160,
+      "cache": null
+    },
+    "n_requests": 160,
+    "n_ok": 160,
+    "n_failed": 0,
+    "error_rate": 0.0,
+    "errors_by_kind": {},
+    "duration_s": 3.0920789619999596,
+    "offered_qps": null,
+    "achieved_qps": 51.74512099021943,
+    "output_tokens_per_s": 8279.219358435108,
+    "total_prompt_tokens": 14276,
+    "total_completion_tokens": 25600,
+    "token_counts_estimated": false,
+    "ttft": {
+      "n": 160,
+      "mean": 0.01437048334999389,
+      "p50": 0.01429206349996548,
+      "p90": 0.016426417399998172,
+      "p95": 0.017228984800146917,
+      "p99": 0.019078894269998724,
+      "max": 0.019819666000103098,
+      "ci95_low": 0.01410461821154481,
+      "ci95_high": 0.014626190612021866
+    },
+    "e2e": {
+      "n": 160,
+      "mean": 0.30799898408749443,
+      "p50": 0.30839301150001575,
+      "p90": 0.3163605718999179,
+      "p95": 0.31799490130008506,
+      "p99": 0.3186791045099494,
+      "max": 0.31871306299990465,
+      "ci95_low": 0.3071877548692081,
+      "ci95_high": 0.3088525951060884
+    },
+    "total": {
+      "n": 160,
+      "mean": 0.30799898408749443,
+      "p50": 0.30839301150001575,
+      "p90": 0.3163605718999179,
+      "p95": 0.31799490130008506,
+      "p99": 0.3186791045099494,
+      "max": 0.31871306299990465,
+      "ci95_low": 0.3071877548692081,
+      "ci95_high": 0.3088525951060884
+    },
+    "queue": {
+      "n": 160,
+      "mean": 0.0,
+      "p50": 0.0,
+      "p90": 0.0,
+      "p95": 0.0,
+      "p99": 0.0,
+      "max": 0.0,
+      "ci95_low": 0.0,
+      "ci95_high": 0.0
+    },
+    "itl": {
+      "n": 160,
+      "mean": 0.0024066391117828195,
+      "p50": 0.0024090363237703853,
+      "p90": 0.0024736827540979274,
+      "p95": 0.0024868787049181487,
+      "p99": 0.0024887530653271914,
+      "max": 0.0024910668688525235,
+      "ci95_low": 0.002400044364914216,
+      "ci95_high": 0.0024135960498745607
+    },
+    "goodput_ratio": 1.0,
+    "slo": {
+      "ttft_p95_s": 0.5,
+      "total_p95_s": 2.0,
+      "max_error_rate": 0.01
+    },
+    "cache_hit_rate": 0.0,
+    "cache_kinds": {
+      "miss": 160
+    },
+    "cost": {
+      "model": "self_hosted",
+      "usd_per_1k_requests": 0.0018788674248263642,
+      "usd_per_1m_output_tokens": 0.011742921405164777,
+      "notes": "$0.35/hour for 1 GPU(s) at the measured 51.75 req/s. Cost per request is utilisation-dependent: idle capacity is paid for."
+    },
+    "quality": null
+  },
+  {
+    "config_id": "grpo-single[concurrency=16]",
+    "backend": "sim-1.5b-ft",
+    "label": "grpo-single",
+    "params": {
+      "group": "grpo-single",
+      "mode": "closed",
+      "concurrency": 16,
+      "rate_qps": null,
+      "max_tokens": 160,
+      "cache": null
+    },
+    "n_requests": 160,
+    "n_ok": 160,
+    "n_failed": 0,
+    "error_rate": 0.0,
+    "errors_by_kind": {},
+    "duration_s": 3.097870411000031,
+    "offered_qps": null,
+    "achieved_qps": 51.64838381614227,
+    "output_tokens_per_s": 8263.741410582763,
+    "total_prompt_tokens": 14276,
+    "total_completion_tokens": 25600,
+    "token_counts_estimated": false,
+    "ttft": {
+      "n": 160,
+      "mean": 0.014324352343764701,
+      "p50": 0.014256737499977135,
+      "p90": 0.01648786290004409,
+      "p95": 0.01713062815010744,
+      "p99": 0.018334950730022684,
+      "max": 0.019227401000080135,
+      "ci95_low": 0.014056089235942508,
+      "ci95_high": 0.014580686584070895
+    },
+    "e2e": {
+      "n": 160,
+      "mean": 0.3087194140375075,
+      "p50": 0.30860412150002503,
+      "p90": 0.31591664729996866,
+      "p95": 0.31759527405017707,
+      "p99": 0.3196130011398759,
+      "max": 0.3204312850000406,
+      "ci95_low": 0.3077490401654701,
+      "ci95_high": 0.3097120615351695
+    },
+    "total": {
+      "n": 160,
+      "mean": 0.3087194140375075,
+      "p50": 0.30860412150002503,
+      "p90": 0.31591664729996866,
+      "p95": 0.31759527405017707,
+      "p99": 0.3196130011398759,
+      "max": 0.3204312850000406,
+      "ci95_low": 0.3077490401654701,
+      "ci95_high": 0.3097120615351695
+    },
+    "queue": {
+      "n": 160,
+      "mean": 0.0,
+      "p50": 0.0,
+      "p90": 0.0,
+      "p95": 0.0,
+      "p99": 0.0,
+      "max": 0.0,
+      "ci95_low": 0.0,
+      "ci95_high": 0.0
+    },
+    "itl": {
+      "n": 160,
+      "mean": 0.0024129846522028603,
+      "p50": 0.002413582356556706,
+      "p90": 0.002468404866394327,
+      "p95": 0.0024836253725419605,
+      "p99": 0.0024891188396715964,
+      "max": 0.002492316811474323,
+      "ci95_low": 0.002405440921260175,
+      "ci95_high": 0.002420523522077289
+    },
+    "goodput_ratio": 1.0,
+    "slo": {
+      "ttft_p95_s": 0.5,
+      "total_p95_s": 2.0,
+      "max_error_rate": 0.01
+    },
+    "cache_hit_rate": 0.0,
+    "cache_kinds": {
+      "miss": 160
+    },
+    "cost": {
+      "model": "self_hosted",
+      "usd_per_1k_requests": 0.0018823865344618242,
+      "usd_per_1m_output_tokens": 0.011764915840386402,
+      "notes": "$0.35/hour for 1 GPU(s) at the measured 51.65 req/s. Cost per request is utilisation-dependent: idle capacity is paid for."
+    },
+    "quality": null
+  },
+  {
+    "config_id": "grpo-suite[concurrency=16]",
+    "backend": "sim-1.5b-ft",
+    "label": "grpo-suite",
+    "params": {
+      "group": "grpo-suite",
+      "mode": "closed",
+      "concurrency": 16,
+      "rate_qps": null,
+      "max_tokens": 160,
+      "cache": null
+    },
+    "n_requests": 160,
+    "n_ok": 160,
+    "n_failed": 0,
+    "error_rate": 0.0,
+    "errors_by_kind": {},
+    "duration_s": 3.038536355000133,
+    "offered_qps": null,
+    "achieved_qps": 52.65693126781529,
+    "output_tokens_per_s": 8425.109002850446,
+    "total_prompt_tokens": 14276,
+    "total_completion_tokens": 25600,
+    "token_counts_estimated": false,
+    "ttft": {
+      "n": 160,
+      "mean": 0.01433336085624859,
+      "p50": 0.014411820499958594,
+      "p90": 0.016482341700111647,
+      "p95": 0.017042611400131587,
+      "p99": 0.018529619910038944,
+      "max": 0.019790886999999202,
+      "ci95_low": 0.014058264773607157,
+      "ci95_high": 0.014587519350936341
+    },
+    "e2e": {
+      "n": 160,
+      "mean": 0.3028642115124939,
+      "p50": 0.3031567704999816,
+      "p90": 0.31067145699998944,
+      "p95": 0.3113384473999986,
+      "p99": 0.3136680647801245,
+      "max": 0.314015278999932,
+      "ci95_low": 0.302004233093593,
+      "ci95_high": 0.303706840394049
+    },
+    "total": {
+      "n": 160,
+      "mean": 0.3028642115124939,
+      "p50": 0.3031567704999816,
+      "p90": 0.31067145699998944,
+      "p95": 0.3113384473999986,
+      "p99": 0.3136680647801245,
+      "max": 0.314015278999932,
+      "ci95_low": 0.302004233093593,
+      "ci95_high": 0.303706840394049
+    },
+    "queue": {
+      "n": 160,
+      "mean": 0.0,
+      "p50": 0.0,
+      "p90": 0.0,
+      "p95": 0.0,
+      "p99": 0.0,
+      "max": 0.0,
+      "ci95_low": 0.0,
+      "ci95_high": 0.0
+    },
+    "itl": {
+      "n": 160,
+      "mean": 0.002364927745594258,
+      "p50": 0.002365759926229642,
+      "p90": 0.0024231713590153483,
+      "p95": 0.0024375928176227045,
+      "p99": 0.002445424870163047,
+      "max": 0.0024467283852464923,
+      "ci95_low": 0.0023574727793929055,
+      "ci95_high": 0.0023720387573117362
+    },
+    "goodput_ratio": 1.0,
+    "slo": {
+      "ttft_p95_s": 0.5,
+      "total_p95_s": 2.0,
+      "max_error_rate": 0.01
+    },
+    "cache_hit_rate": 0.0,
+    "cache_kinds": {
+      "miss": 160
+    },
+    "cost": {
+      "model": "self_hosted",
+      "usd_per_1k_requests": 0.0018463328546007751,
+      "usd_per_1m_output_tokens": 0.011539580341254844,
+      "notes": "$0.35/hour for 1 GPU(s) at the measured 52.66 req/s. Cost per request is utilisation-dependent: idle capacity is paid for."
+    },
+    "quality": null
+  }
+]

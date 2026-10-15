@@ -1,0 +1,5 @@
+# Arm B: match on the original database AND every perturbed variant.
+extends: grpo_base.yaml
+name: grpo-suite
+out: ${MIRAGE_RUNS:-runs}/arms/suite
+reward: { mode: suite, shape: binary }

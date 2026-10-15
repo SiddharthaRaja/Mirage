@@ -1,0 +1,5 @@
+# Arm A: the standard execution reward (match on the one original database).
+extends: grpo_base.yaml
+name: grpo-single
+out: ${MIRAGE_RUNS:-runs}/arms/single
+reward: { mode: single, shape: binary }

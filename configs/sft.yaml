@@ -1,0 +1,9 @@
+# Step 2 (only if the spike says the baseline is too weak to learn from).
+#   mirage sft -c configs/sft.yaml
+extends: base.yaml
+name: sft
+out: ${MIRAGE_RUNS:-runs}/sft
+sft:
+  epochs: 1
+  learning_rate: 1.0e-4
+  max_examples: 2000      # a warm-up: just enough that GRPO groups start to disagree

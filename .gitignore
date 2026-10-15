@@ -1,0 +1,8 @@
+__pycache__/
+*.egg-info/
+.venv/
+runs/
+data/mini_spider/
+*.sqlite-journal
+.pytest_cache/
+.ruff_cache/

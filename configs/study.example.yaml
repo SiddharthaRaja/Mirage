@@ -1,0 +1,14 @@
+# The study file `mirage report` reads. Paths are relative to this file.
+title: "Mirage: reward fidelity for GRPO text-to-SQL (Qwen2.5-Coder-0.5B, Spider)"
+simulated: false
+eval_set: "Spider dev (1,034 questions, 20 unseen databases)"
+suites: ../runs/suites
+arms:
+  single: ../runs/arms/single
+  suite: ../runs/arms/suite
+evals:                       # the first entry is the baseline for comparisons
+  start: ../runs/eval/start-dev
+  grpo-single: ../runs/eval/grpo-single-dev
+  grpo-suite: ../runs/eval/grpo-suite-dev
+cost: ../runs/vantage/cost.json    # optional (part D)
+out: ../runs/report
