@@ -1,0 +1,65 @@
+diff --git a/src/vantage/sweep.py b/src/vantage/sweep.py
+index 595b421..b039ee7 100644
+--- a/src/vantage/sweep.py
++++ b/src/vantage/sweep.py
+@@ -128,7 +128,7 @@ async def execute_sweep(
+ ) -> SweepResult:
+     cfg = load_yaml(config_path)
+     name = cfg.get("name") or Path(config_path).stem
+-    workload = Workload.from_jsonl(cfg["workload"])
++    workload = Workload.from_jsonl(cfg["workload"], system=cfg.get("system"))
+     slo = SLO(**(cfg.get("slo") or {}))
+     specs = expand_runs(cfg)
+     if limit:
+@@ -259,7 +259,7 @@ async def _run_quality(
+ 
+     eval_workload = workload
+     if qcfg.get("eval_file"):
+-        eval_workload = Workload.from_jsonl(qcfg["eval_file"])
++        eval_workload = Workload.from_jsonl(qcfg["eval_file"], system=cfg.get("system"))
+ 
+     info(f"[bold]quality gate[/bold]: {len(seen)} distinct backend configs")
+     for spec in seen.values():
+diff --git a/src/vantage/workload/dataset.py b/src/vantage/workload/dataset.py
+index d8c0389..db94fd5 100644
+--- a/src/vantage/workload/dataset.py
++++ b/src/vantage/workload/dataset.py
+@@ -35,8 +35,14 @@ class WorkloadItem:
+     reference_citations: list[int] = field(default_factory=list)
+     source_ids: list[int] = field(default_factory=list)
+     meta: dict[str, Any] = field(default_factory=dict)
++    # A row may carry its own fully-formed user prompt (e.g. a text-to-SQL
++    # workload exported by another project). It is then sent verbatim, so the
++    # benchmark measures exactly the prompt the model was trained on.
++    raw_prompt: str | None = None
+ 
+     def prompt(self) -> str:
++        if self.raw_prompt is not None:
++            return self.raw_prompt
+         return f"Sources:\n{self.context}\n\nQuestion: {self.question}"
+ 
+ 
+@@ -60,18 +66,21 @@ class Workload:
+                 row = json.loads(line)
+             except json.JSONDecodeError as exc:
+                 raise ConfigError(f"{p}:{ln} is not valid JSON ({exc})") from exc
+-            missing = {"id", "question", "context"} - row.keys()
++            missing = {"id", "question"} - row.keys()
++            if "context" not in row and "prompt" not in row:
++                missing.add("context")
+             if missing:
+                 raise ConfigError(f"{p}:{ln} is missing required field(s): {sorted(missing)}")
+             items.append(
+                 WorkloadItem(
+                     id=str(row["id"]),
+                     question=row["question"],
+-                    context=row["context"],
++                    context=row.get("context", ""),
+                     reference_answer=row.get("reference_answer", ""),
+                     reference_citations=row.get("reference_citations", []),
+                     source_ids=row.get("source_ids", []),
+                     meta=row.get("meta", {}),
++                    raw_prompt=row.get("prompt"),
+                 )
+             )
+         if not items:

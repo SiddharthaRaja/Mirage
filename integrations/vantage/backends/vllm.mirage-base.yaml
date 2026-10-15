@@ -1,0 +1,10 @@
+# The GRPO starting model (merged SFT, or the base model if no warm-up),
+# served by the same vLLM process as both adapters. See the README in this folder.
+type: vllm
+name: vllm-mirage-base
+model: ${MIRAGE_START_MODEL:-runs/sft/adapter-merged}
+base_url: ${VLLM_BASE_URL:-http://localhost:8000/v1}
+api_key_env: VLLM_API_KEY
+timeout_s: 120
+max_retries: 0
+pricing: { kind: self_hosted, gpu_hourly_usd: 0.40, n_gpus: 1, note: "set to what your instance costs" }

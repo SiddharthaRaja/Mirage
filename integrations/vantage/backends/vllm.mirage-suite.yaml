@@ -1,0 +1,9 @@
+# The suite-reward GRPO adapter, served unmerged from the same process as the base.
+type: vllm
+name: vllm-mirage-suite
+model: mirage-suite
+base_url: ${VLLM_BASE_URL:-http://localhost:8000/v1}
+api_key_env: VLLM_API_KEY
+timeout_s: 120
+max_retries: 0
+pricing: { kind: self_hosted, gpu_hourly_usd: 0.40, n_gpus: 1, note: "set to what your instance costs" }
