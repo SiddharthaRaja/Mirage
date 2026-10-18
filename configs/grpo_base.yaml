@@ -2,6 +2,5 @@
 # `mirage report` checks the manifests to confirm that.
 extends: base.yaml
 name: grpo
-init_adapter: ${MIRAGE_RUNS:-runs}/sft/adapter    # remove both lines if you skipped SFT
 data:
   filtered_file: ${MIRAGE_RUNS:-runs}/filter/keep.jsonl   # from `mirage filter -c configs/grpo_base.yaml`
