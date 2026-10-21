@@ -30,6 +30,26 @@ Mirage measures that, three ways:
 pip install -e ".[dev]" && mirage demo      # no GPU, no download, ~10 seconds
 ```
 
+## Results (seed 0, one Kaggle T4)
+
+Qwen2.5-Coder-0.5B-Instruct + LoRA, 300 GRPO steps per arm, Spider dev (1,034 questions,
+20 databases never seen in training), evaluated once. Full write-up: [results/WRITEUP.md](results/WRITEUP.md).
+
+| | value |
+|---|---|
+| near-miss SQL the standard check accepts (157 non-empty DBs) | **33.2%**; at least 10.8% provably wrong |
+| rewarded training attempts the suite rejects | 4.0% [2.9, 5.2], no drift over training |
+| ... of which genuinely wrong (dev cases, hand-checked) | 14 of 27; the rest are ties / duplicate names |
+| training rewards paid on empty-result questions | **20.3%** (7 empty-table databases; invisible to the suite) |
+| dev EX, base → GRPO (single reward) | 42.0% → **56.8%** (+14.8 [12.0, 17.6], p < 0.001) |
+| dev EX, suite reward vs single reward | −1.2 [−2.6, 0.3], no detectable difference |
+
+In one line: the execution reward lies, mostly through empty databases rather than near-miss SQL;
+a 0.5B policy did not learn to exploit it in 300 steps, RL still added ~15 points on unseen
+databases, and the stricter reward bought nothing measurable. One seed so far; seed 1 is running.
+Cases: [results/GALLERY.md](results/GALLERY.md). Numbers and run notes: [results/RESULTS.md](results/RESULTS.md).
+
+
 `mirage demo` runs the entire study end to end on a bundled synthetic fixture
 with a simulated policy and writes a report with seven charts. Everything in
 that report is stamped **SIMULATED**: it proves the measurements work, not
@@ -127,12 +147,12 @@ scripts/smoke_train.py  every training/generation call on a tiny random model (2
 
 - Measurement side (data, execution, suites, rewards, audit, evaluation,
   report): built and tested — 70 tests plus the full simulated study in CI.
-- Training side: `scripts/smoke_train.py` runs SFT, merge, filter, both GRPO
-  arms, resume, generation and scoring on a tiny random model with torch 2.14,
-  transformers 5.19, TRL 1.15.0 and PEFT 0.21.2. Passes on CPU. Not yet run on
-  a GPU: no real-model results exist yet.
-- See [HANDOUT.md](HANDOUT.md) Part 9 for exactly what has and has not been
-  executed.
+- Real runs on a Kaggle T4 (2026-10-19 to 21): suites on all databases, model
+  spike, pass-rate filter, both GRPO arms (seed 0), training audit, dev
+  evaluation, gallery and write-up. Outputs in `results/run2/`; notebooks in
+  `kaggle/` (`run2_full_study`, `08_dev_eval`, `09_seed1`).
+- Open: seed 1 of both arms; the official test-suite evaluator number; a run
+  with empty-result questions removed.
 
 ## Licence
 
