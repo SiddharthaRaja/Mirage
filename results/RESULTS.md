@@ -46,7 +46,7 @@ Reading: the single-DB reward paid for provably wrong SQL in ~4% of rewarded rol
 but over 300 steps the 0.5B model did not learn to exploit it (no significant drift;
 the two arms are indistinguishable). The suite arm still shows ~3.4% because the audit's
 strict check uses variants the training reward does not; suites are not perfect.
-One seed only; dev accuracy pending (`kaggle/08_dev_eval.ipynb`).
+One seed only; dev accuracy below.
 
 ## 01 · Model spike — 100 val questions (3 databases)
 
@@ -64,3 +64,32 @@ Decision: Qwen2.5-Coder-0.5B-Instruct, no SFT warm-up (baseline inside the
 - Smoke test passed on T4 after that fix.
 - Run long jobs as committed versions (Save & Run All); interactive sessions die and wipe /kaggle/working.
 - Training speed on a T4: ~45 s per GRPO step (8 questions x 8 rollouts).
+## Dev evaluation · seed 0 (Kaggle T4, 1.5 h) — 2026-10-20
+Notebook: `kaggle/08_dev_eval.ipynb`. Spider dev, 1,034 questions on 20 databases never seen in training,
+touched once. Greedy decoding for EX; 8 samples (T = 0.8) for pass@8 and majority vote. 95% bootstrap CIs.
+
+| model | EX | suite EX | pass@1 | pass@8 | maj EX |
+|---|---|---|---|---|---|
+| base (Qwen2.5-Coder-0.5B-Instruct) | 42.0% [39.1, 44.8] | 40.1% [37.2, 42.9] | 33.3% | 65.2% | 56.0% |
+| GRPO single-DB reward | **56.8%** [54.0, 59.8] | 54.2% [51.3, 57.2] | 52.8% | 69.7% | 60.5% |
+| GRPO suite reward | 55.6% [52.5, 58.6] | 53.1% [50.1, 56.1] | 52.2% | 70.1% | 60.3% |
+
+Paired comparisons (bootstrap over questions + McNemar):
+
+| comparison | EX | suite EX | gained / lost (EX) |
+|---|---|---|---|
+| single − base | **+14.8 pts** [12.0, 17.6], p < 0.001 | +14.0 [11.1, 16.7] | 207 / 54 |
+| suite − base | **+13.6 pts** [10.7, 16.6], p < 0.001 | +13.0 [10.2, 15.9] | 206 / 65 |
+| suite − single | −1.2 [−2.6, 0.3], p = 0.13 (no detectable difference) | −1.1 [−2.4, 0.3] | 21 / 33 |
+
+Reading:
+- GRPO with an execution reward improves the 0.5B model by ~14 points on unseen databases, mostly by
+  fixing schema linking (wrong column/table names: 410 → 193 failures).
+- The tighter suite reward does not beat the standard one at this scale, consistent with the training
+  audit (the standard reward lies on ~4% of rewarded rollouts and the policy does not exploit it).
+- Every model loses ~2 points from EX to suite EX: answers right only on the original data.
+- Full report (charts, failure taxonomy, false-positive examples): `runs/report/REPORT.md` in the Kaggle output.
+
+Caveat: the report flags that the two arms' configs differ beyond `reward.mode`. The only other difference
+is the session time budget passed to each arm (`budget.max_hours`); it never triggered (both arms ran all
+300 steps). Seed 1 will pass identical budgets so the manifests match exactly.
