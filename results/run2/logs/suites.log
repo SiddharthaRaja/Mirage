@@ -1,0 +1,335 @@
+[1/166] academic: 176 gold, 1455 mutants, 1455 pass the original, 0 caught by 1 
+variants
+[2/166] activity_1: 44 gold, 165 mutants, 69 pass the original, 11 caught by 3 
+variants
+[3/166] aircraft: 23 gold, 91 mutants, 25 pass the original, 10 caught by 2 
+variants
+[4/166] allergy_1: 49 gold, 165 mutants, 37 pass the original, 2 caught by 1 
+variants
+[5/166] apartment_rentals: 40 gold, 141 mutants, 39 pass the original, 18 caught
+by 4 variants
+[6/166] architecture: 17 gold, 70 mutants, 17 pass the original, 9 caught by 3 
+variants
+[7/166] assets_maintenance: 31 gold, 110 mutants, 39 pass the original, 11 
+caught by 4 variants
+[8/166] baseball_1: 41 gold, 243 mutants, 38 pass the original, 11 caught by 3 
+variants
+[9/166] battle_death: 16 gold, 58 mutants, 21 pass the original, 14 caught by 4 
+variants
+[10/166] behavior_monitoring: 40 gold, 137 mutants, 36 pass the original, 9 
+caught by 3 variants
+[11/166] bike_1: 53 gold, 269 mutants, 67 pass the original, 15 caught by 3 
+variants
+[12/166] body_builder: 24 gold, 79 mutants, 32 pass the original, 18 caught by 4
+variants
+[13/166] book_2: 20 gold, 69 mutants, 31 pass the original, 19 caught by 4 
+variants
+[14/166] browser_web: 18 gold, 77 mutants, 27 pass the original, 10 caught by 4 
+variants
+[15/166] candidate_poll: 20 gold, 79 mutants, 27 pass the original, 16 caught by
+4 variants
+[16/166] car_1: 52 gold, 269 mutants, 56 pass the original, 11 caught by 2 
+variants
+[17/166] chinook_1: 42 gold, 145 mutants, 37 pass the original, 10 caught by 3 
+variants
+[18/166] cinema: 22 gold, 79 mutants, 29 pass the original, 7 caught by 4 
+variants
+[19/166] city_record: 20 gold, 103 mutants, 39 pass the original, 15 caught by 4
+variants
+[20/166] climbing: 20 gold, 73 mutants, 32 pass the original, 17 caught by 3 
+variants
+[21/166] club_1: 35 gold, 179 mutants, 54 pass the original, 23 caught by 4 
+variants
+[22/166] coffee_shop: 18 gold, 71 mutants, 30 pass the original, 13 caught by 4 
+variants
+[23/166] college_1: 82 gold, 348 mutants, 109 pass the original, 24 caught by 4 
+variants
+[24/166] college_2: 84 gold, 400 mutants, 108 pass the original, 15 caught by 4 
+variants
+[25/166] college_3: 37 gold, 169 mutants, 28 pass the original, 4 caught by 1 
+variants
+[26/166] company_1: 7 gold, 25 mutants, 9 pass the original, 4 caught by 2 
+variants
+[27/166] company_employee: 16 gold, 59 mutants, 21 pass the original, 6 caught 
+by 2 variants
+[28/166] company_office: 20 gold, 66 mutants, 20 pass the original, 10 caught by
+2 variants
+[29/166] concert_singer: 26 gold, 112 mutants, 42 pass the original, 11 caught 
+by 4 variants
+[30/166] county_public_safety: 20 gold, 72 mutants, 28 pass the original, 15 
+caught by 4 variants
+[31/166] course_teach: 15 gold, 47 mutants, 17 pass the original, 7 caught by 2 
+variants
+[32/166] cre_Doc_Control_Systems: 33 gold, 127 mutants, 46 pass the original, 2 
+caught by 2 variants
+[33/166] cre_Doc_Template_Mgt: 42 gold, 117 mutants, 40 pass the original, 7 
+caught by 2 variants
+[34/166] cre_Doc_Tracking_DB: 45 gold, 105 mutants, 42 pass the original, 6 
+caught by 3 variants
+[35/166] cre_Docs_and_Epenses: 42 gold, 102 mutants, 44 pass the original, 8 
+caught by 2 variants
+[36/166] cre_Drama_Workshop_Groups: 41 gold, 138 mutants, 41 pass the original, 
+9 caught by 4 variants
+[37/166] cre_Theme_park: 42 gold, 164 mutants, 44 pass the original, 15 caught 
+by 3 variants
+[38/166] csu_1: 33 gold, 247 mutants, 86 pass the original, 21 caught by 4 
+variants
+[39/166] culture_company: 19 gold, 81 mutants, 24 pass the original, 7 caught by
+2 variants
+[40/166] customer_complaints: 23 gold, 81 mutants, 32 pass the original, 13 
+caught by 4 variants
+[41/166] customer_deliveries: 16 gold, 54 mutants, 15 pass the original, 5 
+caught by 2 variants
+[42/166] customers_and_addresses: 44 gold, 190 mutants, 55 pass the original, 20
+caught by 4 variants
+[43/166] customers_and_invoices: 41 gold, 100 mutants, 36 pass the original, 7 
+caught by 3 variants
+[44/166] customers_and_products_contacts: 15 gold, 61 mutants, 21 pass the 
+original, 7 caught by 2 variants
+[45/166] customers_campaigns_ecommerce: 15 gold, 47 mutants, 11 pass the 
+original, 3 caught by 2 variants
+[46/166] customers_card_transactions: 40 gold, 108 mutants, 41 pass the 
+original, 13 caught by 4 variants
+[47/166] debate: 15 gold, 49 mutants, 18 pass the original, 9 caught by 3 
+variants
+[48/166] decoration_competition: 15 gold, 43 mutants, 16 pass the original, 7 
+caught by 1 variants
+[49/166] department_management: 16 gold, 57 mutants, 20 pass the original, 9 
+caught by 2 variants
+[50/166] department_store: 44 gold, 222 mutants, 71 pass the original, 22 caught
+by 4 variants
+[51/166] device: 20 gold, 69 mutants, 29 pass the original, 9 caught by 4 
+variants
+[52/166] document_management: 22 gold, 83 mutants, 28 pass the original, 4 
+caught by 2 variants
+[53/166] dog_kennels: 42 gold, 134 mutants, 46 pass the original, 13 caught by 3
+variants
+[54/166] dorm_1: 50 gold, 237 mutants, 64 pass the original, 13 caught by 4 
+variants
+[55/166] driving_school: 47 gold, 196 mutants, 75 pass the original, 38 caught 
+by 4 variants
+[56/166] e_government: 20 gold, 72 mutants, 23 pass the original, 6 caught by 2 
+variants
+[57/166] e_learning: 41 gold, 127 mutants, 38 pass the original, 8 caught by 4 
+variants
+[58/166] election: 34 gold, 114 mutants, 38 pass the original, 25 caught by 4 
+variants
+[59/166] election_representative: 20 gold, 60 mutants, 23 pass the original, 16 
+caught by 2 variants
+[60/166] employee_hire_evaluation: 19 gold, 63 mutants, 24 pass the original, 7 
+caught by 3 variants
+[61/166] entertainment_awards: 22 gold, 75 mutants, 25 pass the original, 10 
+caught by 2 variants
+[62/166] entrepreneur: 20 gold, 69 mutants, 26 pass the original, 18 caught by 4
+variants
+[63/166] epinions_1: 28 gold, 110 mutants, 38 pass the original, 18 caught by 3 
+variants
+[64/166] farm: 20 gold, 75 mutants, 34 pass the original, 14 caught by 4 
+variants
+[65/166] film_rank: 24 gold, 78 mutants, 36 pass the original, 23 caught by 3 
+variants
+[66/166] flight_1: 48 gold, 189 mutants, 63 pass the original, 8 caught by 4 
+variants
+[67/166] flight_2: 40 gold, 158 mutants, 100 pass the original, 5 caught by 2 
+variants
+[68/166] flight_4: 41 gold, 150 mutants, 26 pass the original, 1 caught by 1 
+variants
+[69/166] flight_company: 19 gold, 70 mutants, 29 pass the original, 13 caught by
+4 variants
+[70/166] formula_1: 40 gold, 247 mutants, 86 pass the original, 11 caught by 2 
+variants
+[71/166] game_1: 43 gold, 162 mutants, 53 pass the original, 14 caught by 4 
+variants
+[72/166] game_injury: 18 gold, 70 mutants, 22 pass the original, 14 caught by 4 
+variants
+[73/166] gas_company: 23 gold, 85 mutants, 36 pass the original, 16 caught by 4 
+variants
+[74/166] geo: 220 gold, 1179 mutants, 1179 pass the original, 0 caught by 1 
+variants
+[75/166] gymnast: 20 gold, 70 mutants, 25 pass the original, 16 caught by 3 
+variants
+[76/166] hospital_1: 50 gold, 239 mutants, 89 pass the original, 31 caught by 4 
+variants
+[77/166] hr_1: 59 gold, 248 mutants, 92 pass the original, 5 caught by 1 
+variants
+[78/166] icfp_1: 33 gold, 171 mutants, 57 pass the original, 27 caught by 4 
+variants
+[79/166] imdb: 75 gold, 510 mutants, 510 pass the original, 0 caught by 1 
+variants
+[80/166] inn_1: 36 gold, 155 mutants, 55 pass the original, 14 caught by 3 
+variants
+[81/166] insurance_and_eClaims: 20 gold, 73 mutants, 23 pass the original, 8 
+caught by 2 variants
+[82/166] insurance_fnol: 21 gold, 87 mutants, 23 pass the original, 6 caught by 
+2 variants
+[83/166] insurance_policies: 24 gold, 85 mutants, 28 pass the original, 5 caught
+by 1 variants
+[84/166] journal_committee: 17 gold, 56 mutants, 18 pass the original, 8 caught 
+by 2 variants
+[85/166] loan_1: 40 gold, 159 mutants, 57 pass the original, 18 caught by 4 
+variants
+[86/166] local_govt_and_lot: 17 gold, 47 mutants, 18 pass the original, 4 caught
+by 2 variants
+[87/166] local_govt_in_alabama: 15 gold, 51 mutants, 16 pass the original, 4 
+caught by 1 variants
+[88/166] local_govt_mdm: 14 gold, 39 mutants, 14 pass the original, 0 caught by 
+1 variants
+[89/166] machine_repair: 15 gold, 51 mutants, 12 pass the original, 3 caught by 
+2 variants
+[90/166] manufactory_1: 40 gold, 137 mutants, 44 pass the original, 17 caught by
+4 variants
+[91/166] manufacturer: 16 gold, 76 mutants, 32 pass the original, 10 caught by 4
+variants
+[92/166] match_season: 29 gold, 89 mutants, 26 pass the original, 9 caught by 4 
+variants
+[93/166] medicine_enzyme_interaction: 22 gold, 79 mutants, 19 pass the original,
+5 caught by 1 variants
+[94/166] mountain_photos: 17 gold, 65 mutants, 18 pass the original, 7 caught by
+3 variants
+[95/166] movie_1: 49 gold, 243 mutants, 57 pass the original, 15 caught by 2 
+variants
+[96/166] museum_visit: 18 gold, 102 mutants, 34 pass the original, 22 caught by 
+3 variants
+[97/166] music_1: 50 gold, 265 mutants, 95 pass the original, 24 caught by 4 
+variants
+[98/166] music_2: 48 gold, 226 mutants, 226 pass the original, 0 caught by 1 
+variants
+[99/166] music_4: 29 gold, 104 mutants, 32 pass the original, 21 caught by 4 
+variants
+[100/166] musical: 20 gold, 63 mutants, 33 pass the original, 23 caught by 4 
+variants
+[101/166] network_1: 28 gold, 86 mutants, 35 pass the original, 7 caught by 3 
+variants
+[102/166] network_2: 43 gold, 248 mutants, 87 pass the original, 21 caught by 4 
+variants
+[103/166] news_report: 18 gold, 61 mutants, 26 pass the original, 15 caught by 3
+variants
+[104/166] orchestra: 20 gold, 69 mutants, 24 pass the original, 15 caught by 3 
+variants
+[105/166] party_host: 15 gold, 57 mutants, 24 pass the original, 10 caught by 4 
+variants
+[106/166] party_people: 22 gold, 76 mutants, 22 pass the original, 11 caught by 
+2 variants
+[107/166] performance_attendance: 15 gold, 52 mutants, 17 pass the original, 4 
+caught by 3 variants
+[108/166] perpetrator: 21 gold, 72 mutants, 31 pass the original, 18 caught by 2
+variants
+[109/166] pets_1: 23 gold, 115 mutants, 29 pass the original, 9 caught by 2 
+variants
+[110/166] phone_1: 27 gold, 115 mutants, 39 pass the original, 10 caught by 2 
+variants
+[111/166] phone_market: 15 gold, 61 mutants, 28 pass the original, 15 caught by 
+3 variants
+[112/166] pilot_record: 15 gold, 57 mutants, 24 pass the original, 12 caught by 
+3 variants
+[113/166] poker_player: 20 gold, 64 mutants, 24 pass the original, 15 caught by 
+4 variants
+[114/166] product_catalog: 21 gold, 84 mutants, 30 pass the original, 13 caught 
+by 4 variants
+[115/166] products_for_hire: 18 gold, 77 mutants, 20 pass the original, 8 caught
+by 4 variants
+[116/166] products_gen_characteristics: 43 gold, 170 mutants, 40 pass the 
+original, 11 caught by 3 variants
+[117/166] program_share: 20 gold, 68 mutants, 26 pass the original, 16 caught by
+4 variants
+[118/166] protein_institute: 20 gold, 85 mutants, 37 pass the original, 16 
+caught by 4 variants
+[119/166] race_track: 21 gold, 66 mutants, 29 pass the original, 7 caught by 2 
+variants
+[120/166] railway: 21 gold, 67 mutants, 25 pass the original, 15 caught by 3 
+variants
+[121/166] real_estate_properties: 4 gold, 17 mutants, 7 pass the original, 4 
+caught by 2 variants
+[122/166] restaurant_1: 22 gold, 119 mutants, 42 pass the original, 22 caught by
+3 variants
+[123/166] restaurants: 23 gold, 201 mutants, 201 pass the original, 0 caught by 
+1 variants
+[124/166] riding_club: 17 gold, 60 mutants, 20 pass the original, 7 caught by 2 
+variants
+[125/166] roller_coaster: 17 gold, 66 mutants, 29 pass the original, 9 caught by
+3 variants
+[126/166] sakila_1: 41 gold, 171 mutants, 64 pass the original, 6 caught by 2 
+variants
+[127/166] scholar: 158 gold, 1333 mutants, 1333 pass the original, 0 caught by 1
+variants
+[128/166] school_bus: 18 gold, 66 mutants, 24 pass the original, 12 caught by 3 
+variants
+[129/166] school_finance: 24 gold, 116 mutants, 48 pass the original, 19 caught 
+by 4 variants
+[130/166] school_player: 20 gold, 64 mutants, 21 pass the original, 12 caught by
+4 variants
+[131/166] scientist_1: 24 gold, 90 mutants, 37 pass the original, 9 caught by 2 
+variants
+[132/166] ship_1: 24 gold, 89 mutants, 38 pass the original, 14 caught by 2 
+variants
+[133/166] ship_mission: 15 gold, 51 mutants, 24 pass the original, 10 caught by 
+3 variants
+[134/166] shop_membership: 22 gold, 106 mutants, 48 pass the original, 13 caught
+by 3 variants
+[135/166] singer: 16 gold, 57 mutants, 22 pass the original, 9 caught by 2 
+variants
+[136/166] small_bank_1: 25 gold, 118 mutants, 35 pass the original, 11 caught by
+3 variants
+[137/166] soccer_1: 14 gold, 43 mutants, 9 pass the original, 3 caught by 1 
+variants
+[138/166] soccer_2: 53 gold, 239 mutants, 78 pass the original, 19 caught by 4 
+variants
+[139/166] solvency_ii: 15 gold, 50 mutants, 17 pass the original, 2 caught by 1 
+variants
+[140/166] sports_competition: 26 gold, 85 mutants, 32 pass the original, 11 
+caught by 3 variants
+[141/166] station_weather: 16 gold, 55 mutants, 15 pass the original, 6 caught 
+by 2 variants
+[142/166] store_1: 56 gold, 267 mutants, 82 pass the original, 43 caught by 4 
+variants
+[143/166] store_product: 22 gold, 107 mutants, 47 pass the original, 15 caught 
+by 4 variants
+[144/166] storm_record: 22 gold, 93 mutants, 33 pass the original, 13 caught by 
+3 variants
+[145/166] student_1: 34 gold, 151 mutants, 67 pass the original, 5 caught by 1 
+variants
+[146/166] student_assessment: 27 gold, 102 mutants, 33 pass the original, 7 
+caught by 2 variants
+[147/166] student_transcripts_tracking: 41 gold, 147 mutants, 46 pass the 
+original, 13 caught by 3 variants
+[148/166] swimming: 30 gold, 118 mutants, 40 pass the original, 19 caught by 3 
+variants
+[149/166] theme_gallery: 20 gold, 96 mutants, 39 pass the original, 19 caught by
+4 variants
+[150/166] tracking_grants_for_research: 39 gold, 190 mutants, 49 pass the 
+original, 10 caught by 4 variants
+[151/166] tracking_orders: 30 gold, 162 mutants, 36 pass the original, 4 caught 
+by 3 variants
+[152/166] tracking_share_transactions: 41 gold, 156 mutants, 63 pass the 
+original, 17 caught by 3 variants
+[153/166] tracking_software_problems: 24 gold, 161 mutants, 66 pass the 
+original, 16 caught by 3 variants
+[154/166] train_station: 23 gold, 87 mutants, 33 pass the original, 17 caught by
+4 variants
+[155/166] tvshow: 31 gold, 106 mutants, 35 pass the original, 4 caught by 1 
+variants
+[156/166] twitter_1: 27 gold, 86 mutants, 23 pass the original, 12 caught by 3 
+variants
+[157/166] university_basketball: 23 gold, 80 mutants, 33 pass the original, 21 
+caught by 4 variants
+[158/166] voter_1: 15 gold, 48 mutants, 18 pass the original, 11 caught by 3 
+variants
+[159/166] voter_2: 36 gold, 125 mutants, 33 pass the original, 11 caught by 4 
+variants
+[160/166] wedding: 20 gold, 98 mutants, 42 pass the original, 15 caught by 4 
+variants
+[161/166] wine_1: 41 gold, 206 mutants, 35 pass the original, 22 caught by 4 
+variants
+[162/166] workshop_paper: 15 gold, 50 mutants, 19 pass the original, 7 caught by
+2 variants
+[163/166] world_1: 65 gold, 386 mutants, 102 pass the original, 14 caught by 4 
+variants
+[164/166] wrestler: 20 gold, 64 mutants, 30 pass the original, 11 caught by 4 
+variants
+[165/166] wta_1: 31 gold, 90 mutants, 22 pass the original, 7 caught by 2 
+variants
+[166/166] yelp: 98 gold, 800 mutants, 800 pass the original, 0 caught by 1 
+variants
+
+blind spot: original DB accepts 49.2% of mutants; suites catch 16.6% of those. 
+(2337s)

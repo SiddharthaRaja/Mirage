@@ -93,3 +93,17 @@ Reading:
 Caveat: the report flags that the two arms' configs differ beyond `reward.mode`. The only other difference
 is the session time budget passed to each arm (`budget.max_hours`); it never triggered (both arms ran all
 300 steps). Seed 1 will pass identical budgets so the manifests match exactly.
+
+## Gallery and write-up (2026-10-21)
+- `results/GALLERY.md`: real false positives from dev and training, re-executed on the suite databases.
+- `results/WRITEUP.md`: the 840-word write-up of seed 0.
+- `results/run2/`: report, charts, dev scores, training ledgers (gzipped), filter, logs.
+
+Two findings from reading the cases:
+1. **20.3% of the rewards paid during training (single arm) went to questions whose gold result is
+   empty**; 92% of those come from the 7 empty-table databases (geo alone: 1,462). Any query that runs
+   and returns nothing is paid. The suite cannot catch this (98.6% of those rollouts also pass it).
+   The pass-rate filter selected these questions (failed executions make attempts disagree).
+2. **Suite-flagged false positives are about half real.** Of 27 on dev (single arm), 14 are genuinely
+   wrong queries right by coincidence; 13 are defensible answers the suite rejects (6 ties:
+   `= MAX()` vs `LIMIT 1`; 7 duplicate names: id vs name, DISTINCT).

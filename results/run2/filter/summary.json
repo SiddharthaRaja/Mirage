@@ -1,0 +1,11 @@
+{
+  "n": 1500,
+  "kept": 925,
+  "all_wrong": 468,
+  "all_right_single": 113,
+  "mean_pass_single": 0.3335,
+  "mean_pass_suite": 0.3160833333333333,
+  "subset_of": 7106,
+  "k": 8,
+  "subset_rule": "sha256('mirage-filter-v1:'+qid), first N"
+}

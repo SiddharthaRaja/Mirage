@@ -1,0 +1,66 @@
+[filter] 1500 of 7106 training questions, 124 of 125 databases, k=8
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+
+Loading weights:   0%|          | 0/290 [00:00<?, ?it/s]
+Loading weights:   0%|          | 1/290 [00:00<01:32,  3.13it/s]
+Loading weights:  80%|███████▉  | 231/290 [00:00<00:00, 685.17it/s]
+Loading weights: 100%|██████████| 290/290 [00:00<00:00, 592.53it/s]
+[filter] 32/1500 questions, 1.7 min, ~79 min left
+[filter] 64/1500 questions, 3.7 min, ~84 min left
+[filter] 96/1500 questions, 5.6 min, ~81 min left
+[filter] 128/1500 questions, 7.3 min, ~78 min left
+[filter] 160/1500 questions, 8.9 min, ~74 min left
+[filter] 192/1500 questions, 10.6 min, ~72 min left
+[filter] 224/1500 questions, 12.1 min, ~69 min left
+[filter] 256/1500 questions, 13.9 min, ~68 min left
+[filter] 288/1500 questions, 15.4 min, ~65 min left
+[filter] 320/1500 questions, 17.2 min, ~63 min left
+[filter] 352/1500 questions, 19.0 min, ~62 min left
+[filter] 384/1500 questions, 20.8 min, ~60 min left
+[filter] 416/1500 questions, 22.7 min, ~59 min left
+[filter] 448/1500 questions, 24.5 min, ~58 min left
+[filter] 480/1500 questions, 26.4 min, ~56 min left
+[filter] 512/1500 questions, 28.1 min, ~54 min left
+[filter] 544/1500 questions, 29.8 min, ~52 min left
+[filter] 576/1500 questions, 31.4 min, ~50 min left
+[filter] 608/1500 questions, 33.3 min, ~49 min left
+[filter] 640/1500 questions, 34.9 min, ~47 min left
+[filter] 672/1500 questions, 36.6 min, ~45 min left
+[filter] 704/1500 questions, 38.4 min, ~43 min left
+[filter] 736/1500 questions, 40.1 min, ~42 min left
+[filter] 768/1500 questions, 41.6 min, ~40 min left
+[filter] 800/1500 questions, 43.2 min, ~38 min left
+[filter] 832/1500 questions, 45.1 min, ~36 min left
+[filter] 864/1500 questions, 46.8 min, ~34 min left
+[filter] 896/1500 questions, 48.5 min, ~33 min left
+[filter] 928/1500 questions, 50.3 min, ~31 min left
+[filter] 960/1500 questions, 52.2 min, ~29 min left
+[filter] 992/1500 questions, 54.0 min, ~28 min left
+[filter] 1024/1500 questions, 56.0 min, ~26 min left
+[filter] 1056/1500 questions, 57.6 min, ~24 min left
+[filter] 1088/1500 questions, 59.5 min, ~23 min left
+[filter] 1120/1500 questions, 61.2 min, ~21 min left
+[filter] 1152/1500 questions, 62.8 min, ~19 min left
+[filter] 1184/1500 questions, 64.6 min, ~17 min left
+[filter] 1216/1500 questions, 66.4 min, ~16 min left
+[filter] 1248/1500 questions, 68.0 min, ~14 min left
+[filter] 1280/1500 questions, 70.0 min, ~12 min left
+[filter] 1312/1500 questions, 71.8 min, ~10 min left
+[filter] 1344/1500 questions, 73.6 min, ~9 min left
+[filter] 1376/1500 questions, 75.4 min, ~7 min left
+[filter] 1408/1500 questions, 77.2 min, ~5 min left
+[filter] 1440/1500 questions, 78.9 min, ~3 min left
+[filter] 1472/1500 questions, 80.8 min, ~2 min left
+[filter] 1500/1500 questions, 82.5 min, ~0 min left
+{
+  "n": 1500,
+  "kept": 925,
+  "all_wrong": 468,
+  "all_right_single": 113,
+  "mean_pass_single": 0.3335,
+  "mean_pass_suite": 0.3160833333333333,
+  "subset_of": 7106,
+  "k": 8,
+  "subset_rule": "sha256('mirage-filter-v1:'+qid), first N"
+}
+wrote /kaggle/working/runs/filter/keep.jsonl

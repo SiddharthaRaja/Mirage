@@ -1,0 +1,122 @@
+{
+ "kind": "grpo",
+ "mirage_version": "0.1.0",
+ "prompt_version": "v1",
+ "created": "2026-10-19T21:28:44+0000",
+ "git": {
+  "sha": "152ddd2389bd1814bfe495f0f87fd29785733be1",
+  "dirty": false
+ },
+ "versions": {
+  "torch": "2.11.0+cu128",
+  "transformers": "5.16.1",
+  "trl": "1.15.0",
+  "peft": "0.21.2",
+  "accelerate": "1.14.0",
+  "datasets": "4.8.5",
+  "vllm": null,
+  "sqlglot": "25.20.2"
+ },
+ "hardware": {
+  "python": "3.13.15",
+  "platform": "Linux-6.18.48+-x86_64-with-glibc2.39",
+  "gpus": [
+   "Tesla T4"
+  ]
+ },
+ "config": {
+  "name": "grpo-single",
+  "spider": "/kaggle/input/datasets/siddhartharajat/spider/spider_data",
+  "out": "/kaggle/working/runs/arms/single",
+  "suites": "/kaggle/working/runs/suites",
+  "model": {
+   "name": "Qwen/Qwen2.5-Coder-0.5B-Instruct",
+   "dtype": "float16",
+   "chat_template_kwargs": {}
+  },
+  "init_adapter": null,
+  "init_model": null,
+  "prompt": {
+   "sample_values": 0
+  },
+  "data": {
+   "split": "train_all",
+   "val_fraction": 0.1,
+   "split_salt": "mirage-v1",
+   "max_examples": null,
+   "filtered_file": "/kaggle/working/runs/filter/keep.jsonl",
+   "seed": 0
+  },
+  "lora": {
+   "r": 16,
+   "alpha": 32,
+   "dropout": 0.05,
+   "target_modules": [
+    "q_proj",
+    "k_proj",
+    "v_proj",
+    "o_proj",
+    "gate_proj",
+    "up_proj",
+    "down_proj"
+   ]
+  },
+  "reward": {
+   "mode": "single",
+   "shape": "binary",
+   "credit_extracted": 0.1,
+   "credit_executed": 0.2
+  },
+  "sft": {
+   "epochs": 1.0,
+   "learning_rate": 0.0001,
+   "per_device_train_batch_size": 8,
+   "gradient_accumulation_steps": 2,
+   "max_length": 2048,
+   "warmup_ratio": 0.03,
+   "logging_steps": 10,
+   "save_steps": 200,
+   "max_examples": 2000,
+   "seed": 0
+  },
+  "grpo": {
+   "num_generations": 8,
+   "beta": 0.04,
+   "learning_rate": 1e-05,
+   "temperature": 0.9,
+   "max_completion_length": 160,
+   "per_device_train_batch_size": 16,
+   "gradient_accumulation_steps": 4,
+   "max_steps": 300,
+   "loss_type": "dapo",
+   "scale_rewards": "group",
+   "logging_steps": 5,
+   "save_steps": 25,
+   "save_total_limit": 3,
+   "use_vllm": false,
+   "seed": 0
+  },
+  "budget": {
+   "max_hours": 5.2,
+   "margin_minutes": 20.0
+  },
+  "eval": {
+   "split": "val",
+   "n_samples": 8,
+   "temperature": 0.8,
+   "max_examples": null,
+   "backend": "hf",
+   "batch_size": 16,
+   "max_new_tokens": 192,
+   "base_url": null
+  },
+  "candidates": [],
+  "notes": ""
+ },
+ "start_model": "Qwen/Qwen2.5-Coder-0.5B-Instruct",
+ "init_fingerprint": "hub:Qwen/Qwen2.5-Coder-0.5B-Instruct",
+ "n_train": 925,
+ "n_train_databases": 122,
+ "n_suites": 166,
+ "resumed_from": null
+}
