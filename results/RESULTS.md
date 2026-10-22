@@ -107,3 +107,16 @@ Two findings from reading the cases:
 2. **Suite-flagged false positives are about half real.** Of 27 on dev (single arm), 14 are genuinely
    wrong queries right by coincidence; 13 are defensible answers the suite rejects (6 ties:
    `= MAX()` vs `LIMIT 1`; 7 duplicate names: id vs name, DISTINCT).
+
+## Seed 1 · single arm (Kaggle T4, 3.6 h) — 2026-10-21
+Notebook: `kaggle/09_seed1.ipynb` (seed 0's suites and filter reused; only the seed changes).
+First attempt hit CUDA out-of-memory at step 9 (fragmentation: 3.08 GiB reserved-but-unallocated);
+rerun with `PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True` completed all 300 steps without retries.
+
+| arm | seed | rollouts | match single | match suite | false-positive share [95% CI] | drift | groups with signal |
+|---|---|---|---|---|---|---|---|
+| single | 0 | 19,200 | 69.8% | 67.0% | 4.0% [2.9, 5.2] | -0.1 pts (n.s.) | 49.1% |
+| single | 1 | 19,200 | 68.9% | 66.0% | 4.2% [2.9, 5.6] | +1.7 pts (n.s.) | 50.2% |
+
+Seed 1 replicates seed 0 within noise: the false-positive share and the absence of drift both hold.
+Pending: seed-1 suite arm (after the weekly quota reset), then dev evaluation of both seed-1 arms.
